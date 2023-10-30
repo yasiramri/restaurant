@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #739072;
+  overflow: hidden;
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*
+  Navbar
+*/
+.nav {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #ECE3CE;
+  padding: 30px;
+}
+
+.nav img {
+  width: 150px;
+  margin-left: 100px;
+  padding: 5px;
+}
+
+#hamburger {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: #ECE3CE;
+}
+
+/*
+  Jumbotron
+*/
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 380px;
+  background-image: url(/src/public/images/heros/hero-image_2.jpg);
+  background-color: rgba(0, 0, 0, 0.6);;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.hero-inner {
+  margin: 0;
+  max-width: 800px;
+}
+
+.hero-title {
+  color: #ECE3CE;
+  font-weight: 500;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.hero-tagline {
+  color: #ECE3CE;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 50px;
+}
+
+/*
+  restaurant list
+*/
+
+
+.restaurant {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  flex: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-title {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.restaurant h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.restaurant img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.restaurant p {
+  margin: 10px 0;
+}
+
+.restaurant p:first-child {
+  font-weight: bold;
+}
+
+#restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* 
+Footer
+*/
+
+footer {
+  background-color: #739072;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+footer ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 14px;
+}
+
+footer a {
+  display: inline-block;
+  padding: 1.3em;
+  text-decoration: none;
+  color: #fff
+}
+
+/* 
+  min width 1024
+*/
+
+@media screen and (max-width: 1024px) {
+  #restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+/* 
+  min width 768
+*/
+
+@media screen and (max-width: 768px) {
+  #restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+/* 
+  min width 425
+*/
+
+@media screen and (max-width: 425px) {
+  #hamburger {
+    display: block; 
+  }
+
+  #drawer {
+    position: absolute;
+    width: 250px;
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color: #739072;
+  }
+
+  #drawer.open {
+    transform: translate(0,0);
+    background-color: #739072;
+  }
+  
+  #drawer ul {
+    list-style: none;
+    padding: 0;
+  }
+  #drawer li {
+    padding: 10px;
+  }
+  #drawer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+  }
+
+  #restaurant-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .nav img{
+    display: none;
+  }
+
+  .nav ul {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    color: #ECE3CE;
+    font-weight: 500;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-right: 80px;
+  }
+
+  .hero-tagline {
+    color: #ECE3CE;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 50px;
+    padding-right: 80px;
+  }
+}
