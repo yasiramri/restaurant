@@ -13,15 +13,16 @@
   </head>
   <body>
     <div class="header">
-      <a id="hamburger" href="#" tabindex="1">☰</a>
+      <a href="#maincontent" class="skip-link" tabindex="1">Menuju ke konten</a>
+      <a id="hamburger" href="#" tabindex="2">☰</a>
       <nav id="drawer" class="nav">
         <a href="http://localhost:8080/"
-          ><img src="./images/logo.png" alt="laper.in" tabindex="2"
+          ><img src="./images/logo.png" alt="laper.in" tabindex="3"
         /></a>
         <ul>
-          <li tabindex="3"><a href="http://localhost:8080/">Home</a></li>
-          <li tabindex="3"><a href="#">Favorite</a></li>
-          <li tabindex="3">
+          <li tabindex="4"><a href="http://localhost:8080/">Home</a></li>
+          <li tabindex="4"><a href="#">Favorite</a></li>
+          <li tabindex="4">
             <a href="https://github.com/yasiramri">About Us</a>
           </li>
         </ul>
@@ -29,19 +30,19 @@
     </div>
     <div class="hero">
       <div class="hero-inner">
-        <h1 class="hero-title" tabindex="4">
+        <h1 class="hero-title" tabindex="5">
           Menyajikan Cita Rasa yang Tak Terlupakan
         </h1>
-        <p class="hero-tagline" tabindex="5">
+        <p class="hero-tagline" tabindex="6">
           Kami mengundang Anda untuk merasakan perpaduan sempurna antara cita
           rasa tak terlupakan, suasana yang nyaman, dan pelayanan terbaik.
         </p>
       </div>
     </div>
-    <main>
+    <main id="maincontent">
       <div>
-        <h1 class="restaurant-title" tabindex="6">Explore Restaurant</h1>
-        <div id="restaurant-list" tabindex="7"></div>
+        <h1 class="restaurant-title" tabindex="7">Explore Restaurant</h1>
+        <div id="restaurant-list" tabindex="8"></div>
       </div>
     </main>
     <footer>

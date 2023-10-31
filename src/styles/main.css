@@ -60,9 +60,23 @@ body {
 
 #hamburger {
   display: none;
-  font-size: 32px;
+  font-size: 44px;
   text-decoration: none;
   color: #ECE3CE;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
 }
 
 /*
